@@ -1,11 +1,12 @@
 @extends('master') @section('content')
-<div class="container-fluid loginBack">
+<div class="container-fluid bigBack">
+    <img class="loginBack" src="https://images.unsplash.com/photo-1453831362806-3d5577f014a4?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=9dd8da96be0724ab84e4147d428f6bba&auto=format&fit=crop&w=1038&q=80" />
     <div class="container">
         <div class="row mainRow">
             <div class="col">
                 <div class="row ">
                     <div id="leftCol" class="col colRow">
-                        <h2 id="leftTitle">MEAL </br> UP</h2>
+                        <img id="logo" height="180" width="200" src="img/meal-up-logo.png" />
                     </div>
                 </div>
                 <div class="row">
@@ -28,7 +29,7 @@
                                         <!-- <label for="email" class="col-sm-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label> -->
 
                                         <div class="col">
-                                            <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus placeholder="E-Mail Address"> @if ($errors->has('email'))
+                                            <input id="email" type="email" class="firstMail form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus placeholder="E-Mail Address"> @if ($errors->has('email'))
                                             <span class="invalid-feedback">
                                           <strong>{{ $errors->first('email') }}</strong>
                                       </span> @endif
@@ -39,7 +40,7 @@
                                         <!-- <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label> -->
 
                                         <div class="col">
-                                            <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required placeholder="Password"> @if ($errors->has('password'))
+                                            <input id="password" type="password" class="firstPass form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required placeholder="Password"> @if ($errors->has('password'))
                                             <span class="invalid-feedback">
                                           <strong>{{ $errors->first('password') }}</strong>
                                       </span> @endif
@@ -73,15 +74,22 @@
                 </div>
                 <div class="row topIcons">
                     <div class="col">
-                        <i class="fab fa-facebook-square fa-2x icon face"></i>
-
-                        <i class="fab fa-instagram fa-2x icon finsta"></i>
-
-                        <i class="fab fa-twitter fa-2x icon tweet"></i>
+                        <a href="https://www.facebook.com/?stype=lo&jlou=AfdcRT9kTFzrJiLwJq57CUQJQn_K-YmZaURxqn0pVpUfwYjfv83EWvA7Fg9bENoRVSjCupMVYrtixRgsDr3gGX885_JWbCZP9-If-UOmNqNs_Q&smuh=2157&lh=Ac9ntiQbc2-1Sufu">
+                            <i class="fab fa-facebook-square fa-2x icon face"></i>
+                        </a>
+                        <a href="https://www.instagram.com/">
+                            <i class="fab fa-instagram fa-2x icon finsta"></i>
+                        </a>
+                        <a href="https://twitter.com/?logged_out=1&lang=en">
+                            <i class="fab fa-twitter fa-2x icon tweet"></i>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+@endsection
+@section('bottomjs')
+
 @endsection
