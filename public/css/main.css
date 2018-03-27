@@ -1,0 +1,124 @@
+/*--------------------
+----------------------
+LOGIN
+----------------------
+--------------------*/
+.loginBack {
+  background-image: url('https://images.unsplash.com/photo-1453831362806-3d5577f014a4?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=9dd8da96be0724ab84e4147d428f6bba&auto=format&fit=crop&w=1038&q=80');
+  background-size: cover;
+  height: 900px;
+}
+ .mainRow {
+  background: #000000c9;
+  color: white;
+  width: 335px;
+  margin-left: 55px;
+}
+.colRow {
+  /* border-right: 1px solid #ffffff4d; */
+  text-align: center;
+}
+.colRow1 {
+  text-align: center;
+  padding-top: 31px;
+}
+#leftCol {
+  padding-top: 90px;
+}
+#leftTitle {
+  font-size: 40px;
+}
+
+#welcome {
+  font-size: 32px;
+    margin-top: 45px;
+}
+#tinyBod {
+  font-size: 20px;
+}
+.logHeader {
+  font-size: 28px;
+  margin: 10px;
+}
+hr {
+    max-width: 50px;
+    border-width: 3px;
+    border-color: white;
+}
+.logBody {
+    margin-top: 40px;
+}
+.form-control {
+  background: #ffffff87;
+}
+.newReg {
+  float: left;
+  font-size: 16px;
+  margin-left: -77px;
+  margin-top: 15px;
+}
+.help1{
+  float: right;
+  margin-top: -38px;
+  font-size: 16px;
+}
+.topIcons {
+    padding-left: 75px;
+}
+.tweet, .finsta {
+    margin-left: 20px;
+}
+#email:active {
+    box-shadow: none;
+}
+#email, #password {
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 1px solid white;
+}
+/*--------------------
+----------------------
+REGISTER
+----------------------
+--------------------*/
+
+
+/*--------------------
+----------------------
+NAVBAR
+----------------------
+--------------------*/
+.navChange:hover {
+  color: black;
+  border-bottom: 1px solid black;
+}
+.navChange {
+  color: black;
+}
+
+/*--------------------
+----------------------
+HOME
+----------------------
+--------------------*/
+
+
+/*--------------------
+----------------------
+PROFILE
+----------------------
+--------------------*/
+
+/*--------------------
+----------------------
+CONTACT
+----------------------
+--------------------*/
+
+
+/*--------------------
+----------------------
+FOOTER
+----------------------
+--------------------*/
