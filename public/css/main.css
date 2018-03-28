@@ -139,7 +139,16 @@ HOME
 PROFILE
 ----------------------
 --------------------*/
-
+#proName {
+    height: 40px;
+    width: 200px;
+    border: 1px solid black;
+}
+#proMail {
+    height: 40px;
+    width: 250px;
+    border: 1px solid black;
+}
 /*--------------------
 ----------------------
 CONTACT

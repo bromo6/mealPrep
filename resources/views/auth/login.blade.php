@@ -1,4 +1,5 @@
-@extends('master') @section('content')
+@extends('master')
+@section('content')
 <div class="container-fluid bigBack">
     <img class="loginBack" src="https://images.unsplash.com/photo-1453831362806-3d5577f014a4?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=9dd8da96be0724ab84e4147d428f6bba&auto=format&fit=crop&w=1038&q=80" />
     <div class="container">
@@ -56,15 +57,15 @@
                                             </button>
                                             <div class="checkbox">
                                                 <label>
-                                          <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> {{ __('Remember Me') }}
-                                      </label>
+                                                    <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> {{ __('Remember Me') }}
+                                                </label>
                                             </div>
                                             <a class="btn btn-link newReg" href="/register" style="float:left;">
-                                    Sign Up Now!
-                                  </a>
+                                                Sign Up Now!
+                                            </a>
                                             <a class="btn btn-link help1" href="{{ route('password.request') }}" style="float:right;">
-                                      {{ __('Forgot Your Password?') }}
-                                  </a>
+                                                {{ __('Forgot Your Password?') }}
+                                            </a>
                                         </div>
                                     </div>
                                 </form>
