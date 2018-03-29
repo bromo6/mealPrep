@@ -19,7 +19,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav mx-auto">
+        <ul class="navbar-nav ml-auto">
         @auth
           <li class="nav-item active">
             <a class="nav-link navChange" href="/home">Home <span class="sr-only">(current)</span></a>

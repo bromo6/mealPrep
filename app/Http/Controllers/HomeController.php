@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\User;
 use Auth;
+use App\Allergy;
 
 class HomeController extends Controller
 {
@@ -36,5 +37,20 @@ class HomeController extends Controller
           'userInfo' => $userInfo
         ];
         return view('profile')->with($data);
+    }
+    public function saveUser(Request $request)
+    {
+        // save data to user table
+        $userInfo = User::where("id", '=', Auth::id())->first();
+        $userInfo->age = $request->age;
+        $userInfo->height = $request->height;
+        $userInfo->weight = $request->weight;
+        $userInfo->save();
+
+        $data = [
+            'userInfo' => $userInfo
+        ];
+        return view('profile')->with($data);
+
     }
 }
