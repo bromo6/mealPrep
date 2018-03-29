@@ -7,10 +7,10 @@
     </div>
     <div class="row">
         <div class="col-3">
-            <p id="proName"></p>
+            <p id="proName">{{ $userInfo->name or 'N/A' }}</p>
         </div>
         <div class="col-3">
-            <p id=proMail></p>
+            <p id=proMail>{{ $userInfo->email or 'N/A' }}</p>
         </div>
     </div>
     <div class="row">

@@ -17,10 +17,9 @@ Route::get('/', function () {
 Route::get('/register', function () {
     return view('register');
 });
-Route::get('/profile', function () {
-    return view('profile');
-});
+
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/profile', 'HomeController@userInfo');

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\User;
+use Auth;
 
 class HomeController extends Controller
 {
@@ -24,5 +26,15 @@ class HomeController extends Controller
     public function index()
     {
         return view('home');
+    }
+    public function userInfo()
+    {
+        $userInfo = User::where("id", '=', Auth::id())->first();
+        // $userInfo = User::find(Auth::id());
+
+        $data = [
+          'userInfo' => $userInfo
+        ];
+        return view('profile')->with($data);
     }
 }

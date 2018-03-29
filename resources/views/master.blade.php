@@ -32,7 +32,7 @@
               Profile
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="/profile">Me</a>
+              <a class="dropdown-item" href="/profile">{{ $userInfo->name or 'N/A' }}</a>
               <a class="dropdown-item" href="/settings">Settings</a>
               <a class="dropdown-item" href="/logout">Logout</a>
             </div>
