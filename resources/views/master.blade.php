@@ -25,17 +25,10 @@
             <a class="nav-link navChange" href="/home">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link navChange" href="contact">Contact Us</a>
+            <a class="nav-link navChange" href="/contact">Contact Us</a>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link navChange dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Profile
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="/profile">{{ $userInfo->name or 'N/A' }}</a>
-              <a class="dropdown-item" href="/settings">Settings</a>
-              <a class="dropdown-item" href="/logout">Logout</a>
-            </div>
+          <li class="nav-item">
+            <a class="nav-link navChange" href="/profile">Profile</a>
           </li>
           <li class="nav-item">
             <a class="nav-link navChange" href="/about">About Us</a>
