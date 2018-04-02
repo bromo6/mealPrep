@@ -64,7 +64,7 @@ class HomeController extends Controller
         $data = [
             'userInfo' => $userInfo
         ];
-        return view('profile')->with($data);
+        return view('home')->with($data);
 
     }
 }

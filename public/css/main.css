@@ -132,7 +132,11 @@ NAVBAR
 HOME
 ----------------------
 --------------------*/
-
+.homeJumbo {
+    background-image: url('img/NewHeader.png');
+    height: 400px;
+    width: 100%;
+}
 
 /*--------------------
 ----------------------
