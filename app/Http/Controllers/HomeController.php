@@ -37,7 +37,7 @@ class HomeController extends Controller
         $data = [
           'userInfo' => $userInfo
         ];
-        return view('profile')->with($data);
+        return view('settings')->with($data);
     }
     public function saveUser(Request $request)
     {

@@ -18,9 +18,13 @@ Route::get('/register', function () {
     return view('register');
 });
 
+Route::get('/logout', function() {
+    Auth::logout();
+});
+
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/profile', 'HomeController@userInfo');
-Route::post('/profileSave', 'HomeController@saveUser');
+Route::get('/settings', 'HomeController@userInfo');
+Route::post('/settingSave', 'HomeController@saveUser');
