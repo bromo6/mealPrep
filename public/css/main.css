@@ -135,6 +135,38 @@ HOME
 .jumbRow {
     top: 0px;
 }
+.youMightLike {
+    padding-top: 20px;
+    margin-left: 20px;
+}
+.owlBtn {
+    height: 180px;
+    width: 40px;
+}
+.owlPics {
+    padding-top: 16px;
+}
+.firstOwl {
+    margin-left: -30px;
+    margin-right: 20px;
+}
+#filtersubmit {
+    position: relative;
+    z-index: 1;
+    left: 15px;
+    top: 1px;
+    color: #7B7B7B;
+    cursor:pointer;
+    width: 0;
+}
+#filter {
+  text-align: center;
+}
+.searchBar{
+    float: left;
+    margin-top: -200px;
+}
+
 
 /*--------------------
 ----------------------
@@ -163,3 +195,38 @@ CONTACT
 FOOTER
 ----------------------
 --------------------*/
+#foot {
+    height: 200px;
+    width: 100%;
+    background-color: black;
+    color: white;
+}
+.bottomTags:hover {
+    color: white;
+}
+.bottomTags {
+    color: white;
+    font-size: 20px;
+}
+.bottomIcons:hover {
+    color: white;
+}
+.bottomIcons {
+    color: white;
+}
+.socialMedia {
+    margin-left: 675px;
+    padding-top: 20px;
+}
+.bottomNav {
+    margin-left: 595px;
+    margin-top: 5px;
+}
+.footHome, .footPro, .footAbout {
+    border-right: 1px solid white;
+    padding: 5px;
+}
+.footLog {
+    margin-left: 690px;
+    margin-top: 15px;
+}
