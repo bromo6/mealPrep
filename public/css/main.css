@@ -182,16 +182,7 @@ HOME
 PROFILE
 ----------------------
 --------------------*/
-#proName {
-    height: 40px;
-    width: 200px;
-    border: 1px solid black;
-}
-#proMail {
-    height: 40px;
-    width: 250px;
-    border: 1px solid black;
-}
+
 .proHeader {
     background-image: url('https://files.slack.com/files-pri/T8TBSJ9S9-FA1PNLGCT/saaaaalaaaad.jpeg');
     background-size: cover;
@@ -226,6 +217,46 @@ PROFILE
 }
 .owlText {
     text-align: center;
+}
+/*--------------------
+----------------------
+SETTINGS
+----------------------
+--------------------*/
+.setBack {
+    background-image: url('https://files.slack.com/files-pri/T8TBSJ9S9-FA1PNLGCT/saaaaalaaaad.jpeg');
+    background-size: cover;
+    height: 850px;
+}
+.mainSet {
+    background: #00000096;
+    color: white;
+    width: 840px;
+    height: 850px;
+    margin-left: 155px;
+    position: relative;
+}
+#proName {
+    height: 40px;
+    width: 200px;
+    border-bottom: 1px solid white;
+}
+#passChange, #confirmPass, #userName {
+    color: white;
+    background: transparent;
+    border: 0px;
+    border-bottom: 1px solid white;
+}
+#proMail {
+    height: 40px;
+    width: 250px;
+    border-bottom: 1px solid white;
+}
+#age, #height, #weight {
+    color: white;
+    background: transparent;
+    border: 0px;
+    border-bottom: 1px solid white;
 }
 /*--------------------
 ----------------------
