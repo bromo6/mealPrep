@@ -54,6 +54,7 @@ class HomeController extends Controller
         Log::info($request);
         // save data to user table
         $userInfo = User::where("id", '=', Auth::id())->first();
+        $userInfo->username = $request->username;
         $userInfo->age = $request->age;
         $userInfo->height = $request->height;
         $userInfo->weight = $request->weight;
