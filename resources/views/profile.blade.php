@@ -34,7 +34,7 @@
         </div>
     </div>
     <div class="row mt-5 mb-3 ml-3">
-        <div class="col">
+        <div class="col owlText">
             <h2>My Recipes</h2>
         </div>
     </div>
@@ -69,7 +69,7 @@
 
     </div>
     <div class="row mt-5 mb-3 ml-3">
-        <div class="col">
+        <div class="col owlText">
             <h2>Favorites</h2>
         </div>
     </div>
@@ -103,6 +103,11 @@
         </button> -->
         </div>
 
+    </div>
+    <div class="row">
+        <div class="col py-5 add">
+            <button type="btn" class="btn btn-success plus">Add Recipe</button>
+        </div>
     </div>
     <footer id="foot">
         <div id="copy" class="copyright">

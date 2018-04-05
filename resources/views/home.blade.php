@@ -16,7 +16,7 @@
     <!-- <img height="400" width="100%" src="/img/NewHeader.png" /> -->
     <!--FIRST CAROUSEL  ------------------------------------>
     <div class="row mt-5 mb-3 ml-3">
-        <div class="col">
+        <div class="col owlText">
             <h2>Things You Might Like</h2>
         </div>
     </div>
@@ -52,7 +52,7 @@
     </div>
     <!--SECOND CAROUSEL  ----------------------------------------->
     <div class="row mt-5 mb-3 ml-3">
-        <div class="col">
+        <div class="col owlText">
             <h2>Trending</h2>
         </div>
     </div>
@@ -89,7 +89,7 @@
     </div>
     <!--THIRD CAROUSEL  ------------------------------------------>
     <div class="row mt-5 mb-3 ml-3">
-        <div class="col">
+        <div class="col owlText">
             <h2>Most Popular</h2>
         </div>
     </div>

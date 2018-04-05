@@ -216,6 +216,17 @@ PROFILE
     font-size: 22px;
     padding-top: 0px;
 }
+.add {
+    padding-left: 615px;
+}
+.plus {
+    width: 220px;
+    height: 40px;
+    color: black;
+}
+.owlText {
+    text-align: center;
+}
 /*--------------------
 ----------------------
 CONTACT
