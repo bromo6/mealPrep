@@ -29,7 +29,7 @@
             </button> -->
         </div>
         <div class="col-10 firstOwl">
-            <div class="owl-carousel owl-theme owlPics">
+            <div class="owl-one owl-carousel owl-theme owlPics">
                 <img height="150" width="100" src="https://whatthehealthmag.files.wordpress.com/2016/11/62dfaedd32fb837b4437eb41ca3bb125.jpg" />
                 <img height="150" width="100" src="https://whatthehealthmag.files.wordpress.com/2016/11/62dfaedd32fb837b4437eb41ca3bb125.jpg" />
                 <img height="150" width="100" src="https://whatthehealthmag.files.wordpress.com/2016/11/62dfaedd32fb837b4437eb41ca3bb125.jpg" />
@@ -65,7 +65,7 @@
         </button> -->
         </div>
         <div class="col-10 firstOwl">
-            <div class="second-caro owl-theme owlPics">
+            <div class="owl-two owl-carousel owl-theme owlPics">
                 <div>
                     <img height="150" width="100" src="https://www.rodalesorganiclife.com/sites/rodalesorganiclife.com/files/styles/listicle_slide_custom_user_phone_1x/public/mealprepfoods-chicken-1000.jpg?itok=YEJarqYw" />
                     <img height="150" width="100" src="https://www.rodalesorganiclife.com/sites/rodalesorganiclife.com/files/styles/listicle_slide_custom_user_phone_1x/public/mealprepfoods-chicken-1000.jpg?itok=YEJarqYw" />
@@ -102,7 +102,7 @@
             </button> -->
         </div>
         <div class="col-10 firstOwl">
-            <div class="a-test owl-theme owlPics">
+            <div class="owl-threeowl-carousel owl-theme owlPics">
                 <div>
                     <img height="150" width="100" src="https://showmetheyummy.com/wp-content/uploads/2017/07/Crockpot-Sesame-Chicken-Show-Me-the-Yummy-1.jpg" />
                     <img height="150" width="100" src="https://showmetheyummy.com/wp-content/uploads/2017/07/Crockpot-Sesame-Chicken-Show-Me-the-Yummy-1.jpg" />
