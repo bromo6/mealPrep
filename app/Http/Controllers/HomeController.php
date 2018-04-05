@@ -39,6 +39,16 @@ class HomeController extends Controller
         ];
         return view('settings')->with($data);
     }
+    public function showUser()
+    {
+        $showUser = User::where("id", '=', Auth::id())->first();
+        // $userInfo = User::find(Auth::id());
+
+        $data = [
+          'showUser' => $showUser
+        ];
+        return view('profile')->with($data);
+    }
     public function saveUser(Request $request)
     {
         Log::info($request);
