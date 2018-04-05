@@ -192,6 +192,30 @@ PROFILE
     width: 250px;
     border: 1px solid black;
 }
+.proHeader {
+    background-image: url('https://files.slack.com/files-pri/T8TBSJ9S9-FA1PNLGCT/saaaaalaaaad.jpeg');
+    background-size: cover;
+    height: 400px;
+
+}
+.mainPro {
+ background: #00000096;
+ color: white;
+ width: 335px;
+ height: 400px;
+ margin-left: 85px;
+ position: relative;
+ text-align: center;
+}
+#profilePic {
+    border-radius: 50%;
+}
+.edit {
+    width: 270px;
+    height: 35px;
+    font-size: 22px;
+    padding-top: 0px;
+}
 /*--------------------
 ----------------------
 CONTACT

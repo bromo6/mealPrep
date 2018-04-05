@@ -18,10 +18,6 @@ Route::get('/register', function () {
     return view('register');
 });
 
-Route::get('/profile', function () {
-    return view('profile');
-});
-
 Route::get('/logout', function() {
     Auth::logout();
 });
@@ -32,3 +28,4 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/settings', 'HomeController@userInfo');
 Route::post('/settingSave', 'HomeController@saveUser');
+Route::get('/profile', 'HomeController@showUser');

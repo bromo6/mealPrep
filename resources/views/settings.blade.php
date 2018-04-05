@@ -9,10 +9,10 @@
     </div>
     <div class="row">
         <div class="col-3">
-            <p id="proName">{{ $userInfo->name or 'N/A' }}</p>
+            <p id="proName">{{ $userInfo->name or '' }}</p>
         </div>
         <div class="col-3">
-            <p id=proMail>{{ $userInfo->email or 'N/A' }}</p>
+            <p id=proMail>{{ $userInfo->email or '' }}</p>
         </div>
     </div>
     <form action="/profileSave" method="POST">
@@ -91,7 +91,7 @@
                                 <input name="other" type="checkbox" value="">Other
                             </label></br>
                         </br>
-                        <input type="submit" value="Submit">
+                        <button type="submit" class="btn btn-success">Save</button>
                     </div>
                 </div>
             </div>
