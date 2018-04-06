@@ -14,7 +14,7 @@
             </div>
         </div>
     </div>
-    @if (count($recipeResults > 0))
+    @if (count($recipeResults) > 0)
     <div class="row">
         <div class="col">
             @foreach($recipeResults as $recipe)
