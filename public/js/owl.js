@@ -1,43 +1,52 @@
-$(document).ready(function() {
-    $(".owl-carousel").owlCarousel({
-        loop: true,
-        margin: 20,
-        smartSpeed: 4000,
-        nav: true,
-        responsive: {
-            // breakpoint from 0 up
-            0: {
-                items: 1
+$(document).ready(function(){
+    $('.owl-one').owlCarousel({
+        loop:true,
+        margin:10,
+        nav:true,
+        responsive:{
+            0:{
+                items:1
             },
-            // breakpoint from 480 up
-            500: {
-                items: 3
+            600:{
+                items:2
             },
-            // breakpoint from 768 up
-            1000: {
-                items: 5
+            1000:{
+                items:3
             }
         }
     });
 
-    $(".second-caro").owlCarousel({
-        loop: true,
-        margin: 20,
-        smartSpeed: 4000,
-        nav: true,
-        responsive: {
-            // breakpoint from 0 up
-            0: {
-                items: 1
+    $('.owl-two').owlCarousel({
+        loop:true,
+        margin:10,
+        nav:true,
+        responsive:{
+            0:{
+                items:1
             },
-            // breakpoint from 480 up
-            500: {
-                items: 3
+            600:{
+                items:2
             },
-            // breakpoint from 768 up
-            1000: {
-                items: 5
+            1000:{
+                items:3
             }
         }
-    })
+    });
+
+    $('.owl-three').owlCarousel({
+        loop:true,
+        margin:10,
+        nav:true,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:2
+            },
+            1000:{
+                items:3
+            }
+        }
+    });
 });

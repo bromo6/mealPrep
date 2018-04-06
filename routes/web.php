@@ -22,9 +22,10 @@ Route::get('/logout', function() {
     Auth::logout();
 });
 
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/recipe-detail/{$recipeId}', 'HomeController@viewRecipe');
+Route::get('/favorite/{$recipeId}', 'HomeController@favoriteRecipe');
 Route::get('/settings', 'HomeController@userInfo');
 Route::post('/settingSave', 'HomeController@saveUser');

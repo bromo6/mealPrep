@@ -3,13 +3,14 @@
     <div class="homeHeader pt-5">
         <div class="row searchBar justify-content-center">
             <div class="col-6">
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text" id="basic-addon2"><i class="fas fa-search"></i></span>
+                <form method="GET" action="/home">
+                    <div class="input-group mb-3">
+                        <input type="text" name="seachRecipe" class="form-control" placeholder="Search" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                        <div class="input-group-append">
+                            <button type="submit" class="input-group-text" id="basic-addon2"><i class="fas fa-search"></i></button>
+                        </div>
                     </div>
-                    <input type="text" class="form-control" placeholder="Search" aria-label="Recipient's username" aria-describedby="basic-addon2">
-                </div>
-
+                </form>
             </div>
         </div>
     </div>
@@ -28,18 +29,16 @@
             </span>
             </button> -->
         </div>
-        <div class="col-10 firstOwl">
-            <div class="owl-carousel owl-theme owlPics">
-                <img height="150" width="100" src="https://whatthehealthmag.files.wordpress.com/2016/11/62dfaedd32fb837b4437eb41ca3bb125.jpg" />
-                <img height="150" width="100" src="https://whatthehealthmag.files.wordpress.com/2016/11/62dfaedd32fb837b4437eb41ca3bb125.jpg" />
-                <img height="150" width="100" src="https://whatthehealthmag.files.wordpress.com/2016/11/62dfaedd32fb837b4437eb41ca3bb125.jpg" />
-                <img height="150" width="100" src="https://whatthehealthmag.files.wordpress.com/2016/11/62dfaedd32fb837b4437eb41ca3bb125.jpg" />
-                <img height="150" width="100" src="https://whatthehealthmag.files.wordpress.com/2016/11/62dfaedd32fb837b4437eb41ca3bb125.jpg" />
-                <img height="150" width="100" src="https://whatthehealthmag.files.wordpress.com/2016/11/62dfaedd32fb837b4437eb41ca3bb125.jpg" />
-                <img height="150" width="100" src="https://whatthehealthmag.files.wordpress.com/2016/11/62dfaedd32fb837b4437eb41ca3bb125.jpg" />
-                <img height="150" width="100" src="https://whatthehealthmag.files.wordpress.com/2016/11/62dfaedd32fb837b4437eb41ca3bb125.jpg" />
+        <div class="col-10 owl-carousel owl-one owl-theme">
+            <img height="150" width="100" src="https://whatthehealthmag.files.wordpress.com/2016/11/62dfaedd32fb837b4437eb41ca3bb125.jpg" />
+            <img height="150" width="100" src="https://whatthehealthmag.files.wordpress.com/2016/11/62dfaedd32fb837b4437eb41ca3bb125.jpg" />
+            <img height="150" width="100" src="https://whatthehealthmag.files.wordpress.com/2016/11/62dfaedd32fb837b4437eb41ca3bb125.jpg" />
+            <img height="150" width="100" src="https://whatthehealthmag.files.wordpress.com/2016/11/62dfaedd32fb837b4437eb41ca3bb125.jpg" />
+            <img height="150" width="100" src="https://whatthehealthmag.files.wordpress.com/2016/11/62dfaedd32fb837b4437eb41ca3bb125.jpg" />
+            <img height="150" width="100" src="https://whatthehealthmag.files.wordpress.com/2016/11/62dfaedd32fb837b4437eb41ca3bb125.jpg" />
+            <img height="150" width="100" src="https://whatthehealthmag.files.wordpress.com/2016/11/62dfaedd32fb837b4437eb41ca3bb125.jpg" />
+            <img height="150" width="100" src="https://whatthehealthmag.files.wordpress.com/2016/11/62dfaedd32fb837b4437eb41ca3bb125.jpg" />
 
-            </div>
         </div>
         <div class="col-1">
             <!-- <button type="button" role="presentation" class="owl-next owlBtn">
@@ -48,9 +47,8 @@
                     </span>
             </button> -->
         </div>
-
     </div>
-    <!--SECOND CAROUSEL  ----------------------------------------->
+
     <div class="row mt-5 mb-3 ml-3">
         <div class="col">
             <h2>Trending</h2>
@@ -59,62 +57,21 @@
     <div class="row trending">
         <div class="col-1">
             <!-- <button type="button" role="presentation" class="owl-prev owlBtn">
-        <span aria-label="Previous">
-            <i class="fas fa-angle-left"></i>
-        </span>
-        </button> -->
-        </div>
-        <div class="col-10 firstOwl">
-            <div class="second-caro owl-theme owlPics">
-                <div>
-                    <img height="150" width="100" src="https://www.rodalesorganiclife.com/sites/rodalesorganiclife.com/files/styles/listicle_slide_custom_user_phone_1x/public/mealprepfoods-chicken-1000.jpg?itok=YEJarqYw" />
-                    <img height="150" width="100" src="https://www.rodalesorganiclife.com/sites/rodalesorganiclife.com/files/styles/listicle_slide_custom_user_phone_1x/public/mealprepfoods-chicken-1000.jpg?itok=YEJarqYw" />
-                    <img height="150" width="100" src="https://www.rodalesorganiclife.com/sites/rodalesorganiclife.com/files/styles/listicle_slide_custom_user_phone_1x/public/mealprepfoods-chicken-1000.jpg?itok=YEJarqYw" />
-                    <img height="150" width="100" src="https://www.rodalesorganiclife.com/sites/rodalesorganiclife.com/files/styles/listicle_slide_custom_user_phone_1x/public/mealprepfoods-chicken-1000.jpg?itok=YEJarqYw" />
-                    <img height="150" width="100" src="https://www.rodalesorganiclife.com/sites/rodalesorganiclife.com/files/styles/listicle_slide_custom_user_phone_1x/public/mealprepfoods-chicken-1000.jpg?itok=YEJarqYw" />
-                    <img height="150" width="100" src="https://www.rodalesorganiclife.com/sites/rodalesorganiclife.com/files/styles/listicle_slide_custom_user_phone_1x/public/mealprepfoods-chicken-1000.jpg?itok=YEJarqYw" />
-                    <img height="150" width="100" src="https://www.rodalesorganiclife.com/sites/rodalesorganiclife.com/files/styles/listicle_slide_custom_user_phone_1x/public/mealprepfoods-chicken-1000.jpg?itok=YEJarqYw" />
-
-                </div>
-            </div>
-        </div>
-        <div class="col-1">
-            <!-- <button type="button" role="presentation" class="owl-next owlBtn">
-                <span aria-label="next">
-                    <i class="fas fa-angle-right"></i>
-                </span>
-        </button> -->
-        </div>
-
-    </div>
-    <!--THIRD CAROUSEL  ------------------------------------------>
-    <div class="row mt-5 mb-3 ml-3">
-        <div class="col">
-            <h2>Most Popular</h2>
-        </div>
-    </div>
-    <div class="row popular">
-        <div class="col-1">
-            <!-- <button type="button" role="presentation" class="owl-prev owlBtn">
             <span aria-label="Previous">
                 <i class="fas fa-angle-left"></i>
             </span>
             </button> -->
         </div>
-        <div class="col-10 firstOwl">
-            <div class="a-test owl-theme owlPics">
-                <div>
-                    <img height="150" width="100" src="https://showmetheyummy.com/wp-content/uploads/2017/07/Crockpot-Sesame-Chicken-Show-Me-the-Yummy-1.jpg" />
-                    <img height="150" width="100" src="https://showmetheyummy.com/wp-content/uploads/2017/07/Crockpot-Sesame-Chicken-Show-Me-the-Yummy-1.jpg" />
-                    <img height="150" width="100" src="https://showmetheyummy.com/wp-content/uploads/2017/07/Crockpot-Sesame-Chicken-Show-Me-the-Yummy-1.jpg" />
-                    <img height="150" width="100" src="https://showmetheyummy.com/wp-content/uploads/2017/07/Crockpot-Sesame-Chicken-Show-Me-the-Yummy-1.jpg" />
-                    <img height="150" width="100" src="https://showmetheyummy.com/wp-content/uploads/2017/07/Crockpot-Sesame-Chicken-Show-Me-the-Yummy-1.jpg" />
-                    <img height="150" width="100" src="https://showmetheyummy.com/wp-content/uploads/2017/07/Crockpot-Sesame-Chicken-Show-Me-the-Yummy-1.jpg" />
-                    <img height="150" width="100" src="https://showmetheyummy.com/wp-content/uploads/2017/07/Crockpot-Sesame-Chicken-Show-Me-the-Yummy-1.jpg" />
-                    <img height="150" width="100" src="https://showmetheyummy.com/wp-content/uploads/2017/07/Crockpot-Sesame-Chicken-Show-Me-the-Yummy-1.jpg" />
+        <div class="col-10 owl-carousel owl-two owl-theme">
+            <img height="150" width="100" src="https://whatthehealthmag.files.wordpress.com/2016/11/62dfaedd32fb837b4437eb41ca3bb125.jpg" />
+            <img height="150" width="100" src="https://whatthehealthmag.files.wordpress.com/2016/11/62dfaedd32fb837b4437eb41ca3bb125.jpg" />
+            <img height="150" width="100" src="https://whatthehealthmag.files.wordpress.com/2016/11/62dfaedd32fb837b4437eb41ca3bb125.jpg" />
+            <img height="150" width="100" src="https://whatthehealthmag.files.wordpress.com/2016/11/62dfaedd32fb837b4437eb41ca3bb125.jpg" />
+            <img height="150" width="100" src="https://whatthehealthmag.files.wordpress.com/2016/11/62dfaedd32fb837b4437eb41ca3bb125.jpg" />
+            <img height="150" width="100" src="https://whatthehealthmag.files.wordpress.com/2016/11/62dfaedd32fb837b4437eb41ca3bb125.jpg" />
+            <img height="150" width="100" src="https://whatthehealthmag.files.wordpress.com/2016/11/62dfaedd32fb837b4437eb41ca3bb125.jpg" />
+            <img height="150" width="100" src="https://whatthehealthmag.files.wordpress.com/2016/11/62dfaedd32fb837b4437eb41ca3bb125.jpg" />
 
-                </div>
-            </div>
         </div>
         <div class="col-1">
             <!-- <button type="button" role="presentation" class="owl-next owlBtn">
@@ -123,8 +80,41 @@
                     </span>
             </button> -->
         </div>
-
     </div>
+
+    <div class="row mt-5 mb-3 ml-3">
+        <div class="col">
+            <h2>Most Popular</h2>
+        </div>
+    </div>
+    <div class="row mostPopular">
+        <div class="col-1">
+            <!-- <button type="button" role="presentation" class="owl-prev owlBtn">
+            <span aria-label="Previous">
+                <i class="fas fa-angle-left"></i>
+            </span>
+            </button> -->
+        </div>
+        <div class="col-10 owl-carousel owl-one owl-theme">
+            <img height="150" width="100" src="https://whatthehealthmag.files.wordpress.com/2016/11/62dfaedd32fb837b4437eb41ca3bb125.jpg" />
+            <img height="150" width="100" src="https://whatthehealthmag.files.wordpress.com/2016/11/62dfaedd32fb837b4437eb41ca3bb125.jpg" />
+            <img height="150" width="100" src="https://whatthehealthmag.files.wordpress.com/2016/11/62dfaedd32fb837b4437eb41ca3bb125.jpg" />
+            <img height="150" width="100" src="https://whatthehealthmag.files.wordpress.com/2016/11/62dfaedd32fb837b4437eb41ca3bb125.jpg" />
+            <img height="150" width="100" src="https://whatthehealthmag.files.wordpress.com/2016/11/62dfaedd32fb837b4437eb41ca3bb125.jpg" />
+            <img height="150" width="100" src="https://whatthehealthmag.files.wordpress.com/2016/11/62dfaedd32fb837b4437eb41ca3bb125.jpg" />
+            <img height="150" width="100" src="https://whatthehealthmag.files.wordpress.com/2016/11/62dfaedd32fb837b4437eb41ca3bb125.jpg" />
+            <img height="150" width="100" src="https://whatthehealthmag.files.wordpress.com/2016/11/62dfaedd32fb837b4437eb41ca3bb125.jpg" />
+
+        </div>
+        <div class="col-1">
+            <!-- <button type="button" role="presentation" class="owl-next owlBtn">
+                    <span aria-label="next">
+                        <i class="fas fa-angle-right"></i>
+                    </span>
+            </button> -->
+        </div>
+    </div>
+
 </div>
 <!--FOOTER  -------------------------------------------------->
 <footer id="foot">

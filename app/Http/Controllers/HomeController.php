@@ -7,6 +7,8 @@ use App\User;
 use Auth;
 use Log;
 use App\Allergy;
+use App\Recipe;
+use App\Favorite;
 
 class HomeController extends Controller
 {
@@ -25,10 +27,36 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        return view('home');
+        $query = $request->query('searchRecipe');
+        $recipeResults = Recipe::where('name','like','%'.$query.'%')->get();
+        $data = [
+            'recipeResults' => $recipeResults
+        ];
+        return view('home')->with($data);
     }
+
+    public function viewRecipe($recipeId)
+    {
+        $recipe = Recipe::find($recipeId);
+        $data = [
+            'recipe' => $recipe
+        ];
+        return view('recipe-detail')->with($data);
+    }
+
+    public function favoriteRecipe($favoriteId)
+    {
+        $userId = Auth::id();
+        $newFavorite = new Favorite;
+        $newFavorite->recipe_id = $favoriteId;
+        $newFavorite->user_id = $userId;
+        $newFavorite->save();
+
+        return redirect('/profile', ['id' => $userId]);
+    }
+
     public function userInfo()
     {
         $userInfo = User::where("id", '=', Auth::id())->first();
