@@ -14,6 +14,16 @@
             </div>
         </div>
     </div>
+    @if (count($recipeResults > 0))
+    <div class="row">
+        <div class="col">
+            @foreach($recipeResults as $recipe)
+                <!-- insert html logic to display recipes -->
+
+            @endforeach
+        </div>
+    </div>
+    @endif
     <!-- <img height="400" width="100%" src="/img/NewHeader.png" /> -->
     <!--FIRST CAROUSEL  ------------------------------------>
     <div class="row mt-5 mb-3 ml-3">
