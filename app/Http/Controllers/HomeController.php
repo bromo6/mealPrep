@@ -67,11 +67,22 @@ class HomeController extends Controller
         ];
         return view('settings')->with($data);
     }
+    public function showUser()
+    {
+        $showUser = User::where("id", '=', Auth::id())->first();
+        // $userInfo = User::find(Auth::id());
+
+        $data = [
+          'showUser' => $showUser
+        ];
+        return view('profile')->with($data);
+    }
     public function saveUser(Request $request)
     {
         Log::info($request);
         // save data to user table
         $userInfo = User::where("id", '=', Auth::id())->first();
+        $userInfo->username = $request->username;
         $userInfo->age = $request->age;
         $userInfo->height = $request->height;
         $userInfo->weight = $request->weight;

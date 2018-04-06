@@ -29,3 +29,4 @@ Route::get('/recipe-detail/{$recipeId}', 'HomeController@viewRecipe');
 Route::get('/favorite/{$recipeId}', 'HomeController@favoriteRecipe');
 Route::get('/settings', 'HomeController@userInfo');
 Route::post('/settingSave', 'HomeController@saveUser');
+Route::get('/profile', 'HomeController@showUser');
