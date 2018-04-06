@@ -47,7 +47,7 @@
                     </div>
                     <!-- </div> -->
                     <div class="row">
-                        <div class="col">
+                        <div class="col" style="padding-left:190px;">
 
                             <input id="age" type="text" name="age" placeholder="Age" value="{{ $userInfo->age or '' }}">
 

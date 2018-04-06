@@ -257,6 +257,11 @@ SETTINGS
     background: transparent;
     border: 0px;
     border-bottom: 1px solid white;
+    width: 105px;
+    text-align: center;
+}
+#age, #height{
+    margin-right: 20px;
 }
 /*--------------------
 ----------------------
