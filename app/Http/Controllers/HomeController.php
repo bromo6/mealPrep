@@ -9,6 +9,7 @@ use Log;
 use App\Allergy;
 use App\Recipe;
 use App\Favorite;
+use App\RecipeIngredient;
 
 class HomeController extends Controller
 {
@@ -30,18 +31,24 @@ class HomeController extends Controller
     public function index(Request $request)
     {
         $query = $request->query('searchRecipe');
-        $recipeResults = Recipe::where('name','like','%'.$query.'%')->get();
+        $recipeResults = Recipe::where('name','=',$query)->get();
         $data = [
-            'recipeResults' => $recipeResults
+            'recipeResults' => $recipeResults,
+            'query' => $query
         ];
         return view('home')->with($data);
     }
 
-    public function viewRecipe($recipeId)
+    public function viewRecipe($id)
     {
-        $recipe = Recipe::find($recipeId);
+        $recipe = Recipe::find($id);
+        $ingredients = RecipeIngredient::where('recipe_id', $id)->with('ingredient')->get();
+        // $step = Recipe::where('steps');
+        // return $ingredients;
         $data = [
-            'recipe' => $recipe
+            'recipe' => $recipe,
+            'ingredients' => $ingredients,
+            // 'step' => $step
         ];
         return view('recipe-detail')->with($data);
     }
@@ -54,7 +61,7 @@ class HomeController extends Controller
         $newFavorite->user_id = $userId;
         $newFavorite->save();
 
-        return redirect('/profile', ['id' => $userId]);
+        return redirect()->route('profile');
     }
 
     public function userInfo()
@@ -70,10 +77,15 @@ class HomeController extends Controller
     public function showUser()
     {
         $showUser = User::where("id", '=', Auth::id())->first();
+        $myRecipes = Recipe::where('user_id', Auth::id())->get();
+        $favoritedRecipes = Favorite::where('user_id', Auth::id())->get();
+        // return $favoritedRecipes;
         // $userInfo = User::find(Auth::id());
 
         $data = [
-          'showUser' => $showUser
+          'showUser' => $showUser,
+          'favoritedRecipes' => $favoritedRecipes,
+          'myRecipes' => $myRecipes
         ];
         return view('profile')->with($data);
     }
@@ -83,6 +95,7 @@ class HomeController extends Controller
         // save data to user table
         $userInfo = User::where("id", '=', Auth::id())->first();
         $userInfo->username = $request->username;
+        $userInfo->image_path = $request->image_path;
         $userInfo->age = $request->age;
         $userInfo->height = $request->height;
         $userInfo->weight = $request->weight;

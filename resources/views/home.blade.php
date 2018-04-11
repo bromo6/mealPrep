@@ -5,7 +5,7 @@
             <div class="col-6">
                 <form method="GET" action="/home">
                     <div class="input-group mb-3">
-                        <input type="text" name="seachRecipe" class="form-control" placeholder="Search" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                        <input type="text" name="searchRecipe" class="form-control" placeholder="Search" aria-label="Recipient's username" aria-describedby="basic-addon2">
                         <div class="input-group-append">
                             <button type="submit" class="input-group-text" id="basic-addon2"><i class="fas fa-search"></i></button>
                         </div>
@@ -14,13 +14,46 @@
             </div>
         </div>
     </div>
-    @if (count($recipeResults) > 0)
+    @if (strlen($query) > 0)
     <div class="row">
         <div class="col">
-            @foreach($recipeResults as $recipe)
-                <!-- insert html logic to display recipes -->
 
-            @endforeach
+                <!-- insert html logic to display recipes -->
+                <div class="row mt-5 mb-3 ml-3">
+                    <div class="col owlText">
+                        <h2>Search Results</h2>
+                    </div>
+                </div>
+                <div class="row youMightLike">
+                    <div class="col-1">
+                        <!-- <button type="button" role="presentation" class="owl-prev owlBtn">
+                        <span aria-label="Previous">
+                            <i class="fas fa-angle-left"></i>
+                        </span>
+                        </button> -->
+                    </div>
+                    @if (count($recipeResults) > 0)
+                    <div class="col-10 owl-carousel owl-one owl-theme">
+                        <div>
+                                @foreach($recipeResults as $recipe)
+                                    <a href="/recipe-detail/{{$recipe->id}}"><img class="searchPic" height="190" width="100" src="{{ $recipe->image_path or '' }}" /></a>
+                                @endforeach
+                        </div>
+                    </div>
+                    @else
+                        <div class="col text-center">
+                            <p>No results found</p>
+                        </div>
+                    @endif
+                    <div class="col-1">
+                        <!-- <button type="button" role="presentation" class="owl-next owlBtn">
+                                <span aria-label="next">
+                                    <i class="fas fa-angle-right"></i>
+                                </span>
+                        </button> -->
+                    </div>
+                </div>
+
         </div>
     </div>
     @endif
@@ -40,15 +73,46 @@
             </button> -->
         </div>
         <div class="col-10 owl-carousel owl-one owl-theme">
-            <img height="150" width="100" src="https://whatthehealthmag.files.wordpress.com/2016/11/62dfaedd32fb837b4437eb41ca3bb125.jpg" />
-            <img height="150" width="100" src="https://whatthehealthmag.files.wordpress.com/2016/11/62dfaedd32fb837b4437eb41ca3bb125.jpg" />
-            <img height="150" width="100" src="https://whatthehealthmag.files.wordpress.com/2016/11/62dfaedd32fb837b4437eb41ca3bb125.jpg" />
-            <img height="150" width="100" src="https://whatthehealthmag.files.wordpress.com/2016/11/62dfaedd32fb837b4437eb41ca3bb125.jpg" />
-            <img height="150" width="100" src="https://whatthehealthmag.files.wordpress.com/2016/11/62dfaedd32fb837b4437eb41ca3bb125.jpg" />
-            <img height="150" width="100" src="https://whatthehealthmag.files.wordpress.com/2016/11/62dfaedd32fb837b4437eb41ca3bb125.jpg" />
-            <img height="150" width="100" src="https://whatthehealthmag.files.wordpress.com/2016/11/62dfaedd32fb837b4437eb41ca3bb125.jpg" />
-            <img height="150" width="100" src="https://whatthehealthmag.files.wordpress.com/2016/11/62dfaedd32fb837b4437eb41ca3bb125.jpg" />
-
+            <div class="likePic">
+                <img height="150" width="100" src="https://whatthehealthmag.files.wordpress.com/2016/11/62dfaedd32fb837b4437eb41ca3bb125.jpg" />
+                <a href="/favorite/1"><i class="fas fa-heart fa-2x heart"></i></a>
+                <div style="clear:both"></div>
+            </div>
+            <div class="likePic">
+                <img height="150" width="100" src="https://whatthehealthmag.files.wordpress.com/2016/11/62dfaedd32fb837b4437eb41ca3bb125.jpg" />
+                <a href="/favorite/1"><i class="fas fa-heart fa-2x heart"></i></a>
+                <div style="clear:both"></div>
+            </div>
+            <div class="likePic">
+                <img height="150" width="100" src="https://whatthehealthmag.files.wordpress.com/2016/11/62dfaedd32fb837b4437eb41ca3bb125.jpg" />
+                <a href="/favorite/1"><i class="fas fa-heart fa-2x heart"></i></a>
+                <div style="clear:both"></div>
+            </div>
+            <div class="likePic">
+                <img height="150" width="100" src="https://whatthehealthmag.files.wordpress.com/2016/11/62dfaedd32fb837b4437eb41ca3bb125.jpg" />
+                <a href="/favorite/1"><i class="fas fa-heart fa-2x heart"></i></a>
+                <div style="clear:both"></div>
+            </div>
+            <div class="likePic">
+                <img height="150" width="100" src="https://whatthehealthmag.files.wordpress.com/2016/11/62dfaedd32fb837b4437eb41ca3bb125.jpg" />
+                <a href="/favorite/1"><i class="fas fa-heart fa-2x heart"></i></a>
+                <div style="clear:both"></div>
+            </div>
+            <div class="likePic">
+                <img height="150" width="100" src="https://whatthehealthmag.files.wordpress.com/2016/11/62dfaedd32fb837b4437eb41ca3bb125.jpg" />
+                <a href="/favorite/1"><i class="fas fa-heart fa-2x heart"></i></a>
+                <div style="clear:both"></div>
+            </div>
+            <div class="likePic">
+                <img height="150" width="100" src="https://whatthehealthmag.files.wordpress.com/2016/11/62dfaedd32fb837b4437eb41ca3bb125.jpg" />
+                <a href="/favorite/1"><i class="fas fa-heart fa-2x heart"></i></a>
+                <div style="clear:both"></div>
+            </div>
+            <div class="likePic">
+                <img height="150" width="100" src="https://whatthehealthmag.files.wordpress.com/2016/11/62dfaedd32fb837b4437eb41ca3bb125.jpg" />
+                <a href="/favorite/1"><i class="fas fa-heart fa-2x heart"></i></a>
+                <div style="clear:both"></div>
+            </div>
         </div>
         <div class="col-1">
             <!-- <button type="button" role="presentation" class="owl-next owlBtn">
@@ -73,14 +137,46 @@
             </button> -->
         </div>
         <div class="col-10 owl-carousel owl-two owl-theme">
-            <img height="150" width="100" src="https://whatthehealthmag.files.wordpress.com/2016/11/62dfaedd32fb837b4437eb41ca3bb125.jpg" />
-            <img height="150" width="100" src="https://whatthehealthmag.files.wordpress.com/2016/11/62dfaedd32fb837b4437eb41ca3bb125.jpg" />
-            <img height="150" width="100" src="https://whatthehealthmag.files.wordpress.com/2016/11/62dfaedd32fb837b4437eb41ca3bb125.jpg" />
-            <img height="150" width="100" src="https://whatthehealthmag.files.wordpress.com/2016/11/62dfaedd32fb837b4437eb41ca3bb125.jpg" />
-            <img height="150" width="100" src="https://whatthehealthmag.files.wordpress.com/2016/11/62dfaedd32fb837b4437eb41ca3bb125.jpg" />
-            <img height="150" width="100" src="https://whatthehealthmag.files.wordpress.com/2016/11/62dfaedd32fb837b4437eb41ca3bb125.jpg" />
-            <img height="150" width="100" src="https://whatthehealthmag.files.wordpress.com/2016/11/62dfaedd32fb837b4437eb41ca3bb125.jpg" />
-            <img height="150" width="100" src="https://whatthehealthmag.files.wordpress.com/2016/11/62dfaedd32fb837b4437eb41ca3bb125.jpg" />
+            <div class="likePic">
+                <img height="150" width="100" src="https://whatthehealthmag.files.wordpress.com/2016/11/62dfaedd32fb837b4437eb41ca3bb125.jpg" />
+                <a href="/favorite/1"><i class="fas fa-heart fa-2x heart"></i></a>
+                <div style="clear:both"></div>
+            </div>
+            <div class="likePic">
+                <img height="150" width="100" src="https://whatthehealthmag.files.wordpress.com/2016/11/62dfaedd32fb837b4437eb41ca3bb125.jpg" />
+                <a href="/favorite/1"><i class="fas fa-heart fa-2x heart"></i></a>
+                <div style="clear:both"></div>
+            </div>
+            <div class="likePic">
+                <img height="150" width="100" src="https://whatthehealthmag.files.wordpress.com/2016/11/62dfaedd32fb837b4437eb41ca3bb125.jpg" />
+                <a href="/favorite/1"><i class="fas fa-heart fa-2x heart"></i></a>
+                <div style="clear:both"></div>
+            </div>
+            <div class="likePic">
+                <img height="150" width="100" src="https://whatthehealthmag.files.wordpress.com/2016/11/62dfaedd32fb837b4437eb41ca3bb125.jpg" />
+                <a href="/favorite/1"><i class="fas fa-heart fa-2x heart"></i></a>
+                <div style="clear:both"></div>
+            </div>
+            <div class="likePic">
+                <img height="150" width="100" src="https://whatthehealthmag.files.wordpress.com/2016/11/62dfaedd32fb837b4437eb41ca3bb125.jpg" />
+                <a href="/favorite/1"><i class="fas fa-heart fa-2x heart"></i></a>
+                <div style="clear:both"></div>
+            </div>
+            <div class="likePic">
+                <img height="150" width="100" src="https://whatthehealthmag.files.wordpress.com/2016/11/62dfaedd32fb837b4437eb41ca3bb125.jpg" />
+                <a href="/favorite/1"><i class="fas fa-heart fa-2x heart"></i></a>
+                <div style="clear:both"></div>
+            </div>
+            <div class="likePic">
+                <img height="150" width="100" src="https://whatthehealthmag.files.wordpress.com/2016/11/62dfaedd32fb837b4437eb41ca3bb125.jpg" />
+                <a href="/favorite/1"><i class="fas fa-heart fa-2x heart"></i></a>
+                <div style="clear:both"></div>
+            </div>
+            <div class="likePic">
+                <img height="150" width="100" src="https://whatthehealthmag.files.wordpress.com/2016/11/62dfaedd32fb837b4437eb41ca3bb125.jpg" />
+                <a href="/favorite/1"><i class="fas fa-heart fa-2x heart"></i></a>
+                <div style="clear:both"></div>
+            </div>
 
         </div>
         <div class="col-1">
@@ -106,14 +202,46 @@
             </button> -->
         </div>
         <div class="col-10 owl-carousel owl-one owl-theme">
-            <img height="150" width="100" src="https://whatthehealthmag.files.wordpress.com/2016/11/62dfaedd32fb837b4437eb41ca3bb125.jpg" />
-            <img height="150" width="100" src="https://whatthehealthmag.files.wordpress.com/2016/11/62dfaedd32fb837b4437eb41ca3bb125.jpg" />
-            <img height="150" width="100" src="https://whatthehealthmag.files.wordpress.com/2016/11/62dfaedd32fb837b4437eb41ca3bb125.jpg" />
-            <img height="150" width="100" src="https://whatthehealthmag.files.wordpress.com/2016/11/62dfaedd32fb837b4437eb41ca3bb125.jpg" />
-            <img height="150" width="100" src="https://whatthehealthmag.files.wordpress.com/2016/11/62dfaedd32fb837b4437eb41ca3bb125.jpg" />
-            <img height="150" width="100" src="https://whatthehealthmag.files.wordpress.com/2016/11/62dfaedd32fb837b4437eb41ca3bb125.jpg" />
-            <img height="150" width="100" src="https://whatthehealthmag.files.wordpress.com/2016/11/62dfaedd32fb837b4437eb41ca3bb125.jpg" />
-            <img height="150" width="100" src="https://whatthehealthmag.files.wordpress.com/2016/11/62dfaedd32fb837b4437eb41ca3bb125.jpg" />
+            <div class="likePic">
+                <img height="150" width="100" src="https://whatthehealthmag.files.wordpress.com/2016/11/62dfaedd32fb837b4437eb41ca3bb125.jpg" />
+                <a href="/favorite/1"><i class="fas fa-heart fa-2x heart"></i></a>
+                <div style="clear:both"></div>
+            </div>
+            <div class="likePic">
+                <img height="150" width="100" src="https://whatthehealthmag.files.wordpress.com/2016/11/62dfaedd32fb837b4437eb41ca3bb125.jpg" />
+                <a href="/favorite/1"><i class="fas fa-heart fa-2x heart"></i></a>
+                <div style="clear:both"></div>
+            </div>
+            <div class="likePic">
+                <img height="150" width="100" src="https://whatthehealthmag.files.wordpress.com/2016/11/62dfaedd32fb837b4437eb41ca3bb125.jpg" />
+                <a href="/favorite/1"><i class="fas fa-heart fa-2x heart"></i></a>
+                <div style="clear:both"></div>
+            </div>
+            <div class="likePic">
+                <img height="150" width="100" src="https://whatthehealthmag.files.wordpress.com/2016/11/62dfaedd32fb837b4437eb41ca3bb125.jpg" />
+                <a href="/favorite/1"><i class="fas fa-heart fa-2x heart"></i></a>
+                <div style="clear:both"></div>
+            </div>
+            <div class="likePic">
+                <img height="150" width="100" src="https://whatthehealthmag.files.wordpress.com/2016/11/62dfaedd32fb837b4437eb41ca3bb125.jpg" />
+                <a href="/favorite/1"><i class="fas fa-heart fa-2x heart"></i></a>
+                <div style="clear:both"></div>
+            </div>
+            <div class="likePic">
+                <img height="150" width="100" src="https://whatthehealthmag.files.wordpress.com/2016/11/62dfaedd32fb837b4437eb41ca3bb125.jpg" />
+                <a href="/favorite/1"><i class="fas fa-heart fa-2x heart"></i></a>
+                <div style="clear:both"></div>
+            </div>
+            <div class="likePic">
+                <img height="150" width="100" src="https://whatthehealthmag.files.wordpress.com/2016/11/62dfaedd32fb837b4437eb41ca3bb125.jpg" />
+                <a href="/favorite/1"><i class="fas fa-heart fa-2x heart"></i></a>
+                <div style="clear:both"></div>
+            </div>
+            <div class="likePic">
+                <img height="150" width="100" src="https://whatthehealthmag.files.wordpress.com/2016/11/62dfaedd32fb837b4437eb41ca3bb125.jpg" />
+                <a href="/favorite/1"><i class="fas fa-heart fa-2x heart"></i></a>
+                <div style="clear:both"></div>
+            </div>
 
         </div>
         <div class="col-1">

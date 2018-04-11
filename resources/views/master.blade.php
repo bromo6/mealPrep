@@ -18,7 +18,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand fixed-top">
+    <nav class="navbar navbar-expand fixed-top navbar-dark navBack">
         <a class="navbar-brand" href="#"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -30,13 +30,13 @@
                     <a class="nav-link navChange" href="/home">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link navChange" href="/contact">Contact Us</a>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link navChange" href="/profile">Profile</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link navChange" href="/about">About Us</a>
+                    <a class="nav-link navChange" href="/contact">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link navChange" href="/about">About</a>
                 </li>
                 @endauth
             </ul>

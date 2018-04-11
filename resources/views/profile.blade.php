@@ -5,14 +5,22 @@
     <div class="proHeader">
         <div class="row mainPro">
             <div class="col">
-                <div class="row pt-3">
+                <div class="row pt-2">
+                    <div class="col">
+                        <a class="logout" href="/logout">
+                            <i class="fas fa-sign-out-alt fa-2x"></i>
+                        </a>
+
+                    </div>
+                </div>
+                <div class="row">
                     <div class="col">
                         <img id="profilePic" height="120" width="125" src="https://files.slack.com/files-pri/T8TBSJ9S9-FA1AJGWAD/image.png" />
                     </div>
                 </div>
                 <div class="row pt-3">
                     <div class="col">
-                        <p>{{ $showUser->name or '' }}</p>
+                        <p>{{ $showUser->username or ''}}</p>
                     </div>
                 </div>
                 <div class="row">
@@ -22,7 +30,7 @@
                         <p>Weight: {{ $showUser->weight or '' }}</p>
                     </div>
                 </div>
-                <div class="row pt-4">
+                <div class="row pt-2">
                     <div class="col">
                         <a href="/settings">
                             <button type="btn" class="btn btn-success edit">Edit</button>
@@ -47,17 +55,22 @@
             </button> -->
         </div>
         <div class="col-10 firstOwl">
-            <div class="owl-one owl-carousel owl-theme owlPics">
-                <img height="150" width="100" src="https://whatthehealthmag.files.wordpress.com/2016/11/62dfaedd32fb837b4437eb41ca3bb125.jpg" />
-                <img height="150" width="100" src="https://whatthehealthmag.files.wordpress.com/2016/11/62dfaedd32fb837b4437eb41ca3bb125.jpg" />
-                <img height="150" width="100" src="https://whatthehealthmag.files.wordpress.com/2016/11/62dfaedd32fb837b4437eb41ca3bb125.jpg" />
-                <img height="150" width="100" src="https://whatthehealthmag.files.wordpress.com/2016/11/62dfaedd32fb837b4437eb41ca3bb125.jpg" />
-                <img height="150" width="100" src="https://whatthehealthmag.files.wordpress.com/2016/11/62dfaedd32fb837b4437eb41ca3bb125.jpg" />
-                <img height="150" width="100" src="https://whatthehealthmag.files.wordpress.com/2016/11/62dfaedd32fb837b4437eb41ca3bb125.jpg" />
-                <img height="150" width="100" src="https://whatthehealthmag.files.wordpress.com/2016/11/62dfaedd32fb837b4437eb41ca3bb125.jpg" />
-                <img height="150" width="100" src="https://whatthehealthmag.files.wordpress.com/2016/11/62dfaedd32fb837b4437eb41ca3bb125.jpg" />
+            @if (count($myRecipes) > 0)
+            <div class="owl-carousel owl-one owl-theme">
+                <div>
+                    @foreach($myRecipes as $created)
+                        <div class="likePic">
+                            <a href="/recipe-detail/{{$created->id}}"><img class="searchPic" height="190" width="100" src="{{ $created->image_path or '' }}" /></a>
+                            <a href="/favorite/{{$created->id}}"><i class="fas fa-heart fa-2x heart"></i></a>
+                            <div style="clear:both"></div>
+                        </div>
+                    @endforeach
+                </div>
 
             </div>
+            @else
+            <p class="text-center">You haven't favorited any recipes yet!</p>
+            @endif
         </div>
         <div class="col-1">
             <!-- <button type="button" role="presentation" class="owl-next owlBtn">
@@ -73,34 +86,36 @@
             <h2>Favorites</h2>
         </div>
     </div>
-    <div class="row trending">
+    <div class="row youMightLike">
         <div class="col-1">
             <!-- <button type="button" role="presentation" class="owl-prev owlBtn">
-        <span aria-label="Previous">
-            <i class="fas fa-angle-left"></i>
-        </span>
-        </button> -->
+            <span aria-label="Previous">
+                <i class="fas fa-angle-left"></i>
+            </span>
+            </button> -->
         </div>
         <div class="col-10 firstOwl">
-            <div class="owl-two owl-carousel owl-theme owlPics">
+            @if (count($favoritedRecipes) > 0)
+            <div class="owl-carousel owl-two owl-theme">
                 <div>
-                    <img height="150" width="100" src="https://www.rodalesorganiclife.com/sites/rodalesorganiclife.com/files/styles/listicle_slide_custom_user_phone_1x/public/mealprepfoods-chicken-1000.jpg?itok=YEJarqYw" />
-                    <img height="150" width="100" src="https://www.rodalesorganiclife.com/sites/rodalesorganiclife.com/files/styles/listicle_slide_custom_user_phone_1x/public/mealprepfoods-chicken-1000.jpg?itok=YEJarqYw" />
-                    <img height="150" width="100" src="https://www.rodalesorganiclife.com/sites/rodalesorganiclife.com/files/styles/listicle_slide_custom_user_phone_1x/public/mealprepfoods-chicken-1000.jpg?itok=YEJarqYw" />
-                    <img height="150" width="100" src="https://www.rodalesorganiclife.com/sites/rodalesorganiclife.com/files/styles/listicle_slide_custom_user_phone_1x/public/mealprepfoods-chicken-1000.jpg?itok=YEJarqYw" />
-                    <img height="150" width="100" src="https://www.rodalesorganiclife.com/sites/rodalesorganiclife.com/files/styles/listicle_slide_custom_user_phone_1x/public/mealprepfoods-chicken-1000.jpg?itok=YEJarqYw" />
-                    <img height="150" width="100" src="https://www.rodalesorganiclife.com/sites/rodalesorganiclife.com/files/styles/listicle_slide_custom_user_phone_1x/public/mealprepfoods-chicken-1000.jpg?itok=YEJarqYw" />
-                    <img height="150" width="100" src="https://www.rodalesorganiclife.com/sites/rodalesorganiclife.com/files/styles/listicle_slide_custom_user_phone_1x/public/mealprepfoods-chicken-1000.jpg?itok=YEJarqYw" />
-
+                    @foreach($favoritedRecipes as $recipe)
+                        <div class="likePic">
+                            <a href="/recipe-detail/{{$recipe->id}}"><img class="searchPic" height="190" width="100" src="{{ $recipe->recipe->image_path or '' }}" /></a>
+                        </div>
+                    @endforeach
                 </div>
+
             </div>
+            @else
+            <p class="text-center">You haven't favorited any recipes yet!</p>
+            @endif
         </div>
         <div class="col-1">
             <!-- <button type="button" role="presentation" class="owl-next owlBtn">
-                <span aria-label="next">
-                    <i class="fas fa-angle-right"></i>
-                </span>
-        </button> -->
+                    <span aria-label="next">
+                        <i class="fas fa-angle-right"></i>
+                    </span>
+            </button> -->
         </div>
 
     </div>

@@ -17,16 +17,23 @@ Route::get('/', function () {
 Route::get('/register', function () {
     return view('register');
 });
+Route::get('contact', function () {
+    return view('contact');
+});
+Route::get('about', function () {
+    return view('about');
+});
 
 Route::get('/logout', function() {
     Auth::logout();
+    return view('login');
 });
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/recipe-detail/{$recipeId}', 'HomeController@viewRecipe');
-Route::get('/favorite/{$recipeId}', 'HomeController@favoriteRecipe');
+Route::get('/recipe-detail/{id}/', 'HomeController@viewRecipe');
+Route::get('/favorite/{id}/', 'HomeController@favoriteRecipe');
 Route::get('/settings', 'HomeController@userInfo');
 Route::post('/settingSave', 'HomeController@saveUser');
-Route::get('/profile', 'HomeController@showUser');
+Route::get('/profile', 'HomeController@showUser')->name('profile');

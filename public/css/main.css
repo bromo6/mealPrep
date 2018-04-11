@@ -112,7 +112,26 @@ hr {
 REGISTER
 ----------------------
 --------------------*/
-
+.mainRow1 {
+    background: #000000c9;
+    color: white;
+    width: 600px;
+    height: 1000px;
+    margin-left: 55px;
+    position: relative;
+    padding-top: 200px;
+}
+.regInfo {
+    background: transparent;
+    border: 0px;
+    border-bottom: 1px solid white;
+    text-align: center;
+}
+.regBtn {
+    margin-left: 280px;
+    margin-top: 40px;
+    width: 176px;
+}
 
 /*--------------------
 ----------------------
@@ -121,10 +140,13 @@ NAVBAR
 --------------------*/
 .navChange:hover {
   color: black;
-  border-bottom: 1px solid black;
 }
 .navChange {
   color: black;
+  font-size: 20px;
+}
+.navBack {
+    background: black;
 }
 
 /*--------------------
@@ -175,6 +197,18 @@ HOME
 .searchBar {
     padding-top: 150px;
 }
+.heart:hover {
+    color: black;
+}
+.heart {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    color: #00000096;
+}
+.likePic {
+    position: relative;
+}
 
 
 /*--------------------
@@ -182,24 +216,34 @@ HOME
 PROFILE
 ----------------------
 --------------------*/
-
+.logout:hover {
+    color: grey;
+}
+.logout {
+    color: white;
+    float: right;
+    z-index: 50;
+}
 .proHeader {
     background-image: url('https://files.slack.com/files-pri/T8TBSJ9S9-FA1PNLGCT/saaaaalaaaad.jpeg');
     background-size: cover;
-    height: 400px;
+    height: 470px;
 
 }
 .mainPro {
  background: #00000096;
  color: white;
  width: 335px;
- height: 400px;
+ height: 470px;
  margin-left: 85px;
  position: relative;
  text-align: center;
+ padding-top: 60px;
 }
 #profilePic {
     border-radius: 50%;
+    margin-left: 7px;
+    margin-bottom: 12px;
 }
 .edit {
     width: 270px;
@@ -218,17 +262,44 @@ PROFILE
 .owlText {
     text-align: center;
 }
+#userName {
+    margin-left: 65px;
+    margin-top: 13px;
+}
+#passChange {
+    width: 200px;
+}
+#confirmPass {
+    margin-left: 65px;
+}
+.passStuff {
+    margin-bottom: 40px;
+    margin-top: 30px;
+}
+.allergyCheck {
+    margin-right: 30px !important;
+}
 /*--------------------
 ----------------------
 SETTINGS
 ----------------------
 --------------------*/
-.setBack {
+#userName1 {
+    margin-left: 65px;
+    margin-top: 0px;
+    padding-bottom: 14px;
+    background: transparent;
+    border: 0px;
+    border-bottom: 1px solid white;
+    color: white;
+    text-align: center;
+}
+.setBack, .conBack, .aboutBack {
     background-image: url('https://files.slack.com/files-pri/T8TBSJ9S9-FA1PNLGCT/saaaaalaaaad.jpeg');
     background-size: cover;
     height: 850px;
 }
-.mainSet {
+.mainSet, .mainCon, .mainAbout {
     background: #00000096;
     color: white;
     width: 840px;
@@ -240,17 +311,20 @@ SETTINGS
     height: 40px;
     width: 200px;
     border-bottom: 1px solid white;
+    text-align: center;
 }
 #passChange, #confirmPass, #userName {
     color: white;
     background: transparent;
     border: 0px;
     border-bottom: 1px solid white;
+    text-align: center;
 }
 #proMail {
     height: 40px;
-    width: 250px;
+    width: 402px;
     border-bottom: 1px solid white;
+    text-align: center;
 }
 #age, #height, #weight {
     color: white;
@@ -263,13 +337,73 @@ SETTINGS
 #age, #height{
     margin-right: 20px;
 }
+.save {
+    width: 340px;
+    height: 45px;
+    font-size: 22px;
+    padding-top: 0px;
+    margin-top: 50px;
+    margin-left: 55px;
+}
+#profilePic1 {
+    border-radius: 50%;
+    margin-left: 155px;
+    margin-bottom: 12px;
+}
 /*--------------------
 ----------------------
 CONTACT
 ----------------------
 --------------------*/
-
-
+#context {
+    text-align: center;
+}
+.topRow {
+    margin-bottom: 60px;
+}
+.mainCon {
+    padding-top: 150px;
+}
+#conName, #conEmail {
+    background: transparent;
+    color: white;
+    border: 0px;
+    border-bottom: 1px solid white;
+    margin-bottom: 40px;
+}
+#conMessage {
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+    margin-bottom: 40px;
+}
+#conSubmit {
+    margin-left: 90px;
+    width: 250px;
+    height: 35px;
+}
+/*--------------------
+----------------------
+ABOUT
+----------------------
+--------------------*/
+.mainAbout{
+    padding-top: 60px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.ourText {
+    margin-left: 235px;
+}
+.meet {
+    margin-left: 190px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.aboutInfo {
+    padding-left: 70px;
+    margin-top: 50px;
+}
 /*--------------------
 ----------------------
 FOOTER
